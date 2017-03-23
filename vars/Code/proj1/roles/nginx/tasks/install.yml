@@ -1,0 +1,14 @@
+---
+
+- name: Install Nginx
+  yum:
+    name: "{{ package_name }}"
+    state: present
+  register: install
+- name: Show the install details
+  debug:
+    var: install
+- name: Start Nginx Server
+  service:
+    name: nginx
+    state: started

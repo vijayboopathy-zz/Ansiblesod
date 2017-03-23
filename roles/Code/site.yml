@@ -1,0 +1,9 @@
+---
+# This is the site wide playbook
+
+- name: Install and configure Tomcat
+  hosts: centos
+  become: yes
+
+  roles:
+    - tomcat
