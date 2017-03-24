@@ -1,0 +1,13 @@
+[nodes]
+node1
+node2
+node3
+node4
+
+[lb]
+node1
+
+[app]
+node2
+node3
+node4
