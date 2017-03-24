@@ -1,1 +1,1 @@
-ansible centos -m yum -a "name=ntp state=latest" --sudo
+ansible all -m yum -a "name=ntp state=latest" --sudo

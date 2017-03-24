@@ -2,9 +2,15 @@
 # This is the site wide playbook
 
 - name: Install and configure Tomcat
-  hosts: centos
+  hosts: app
   become: yes
 
   roles:
     - tomcat
+
+- name: Install and Configure Nginx
+  hosts: lb
+  become: yes
+
+  roles:
     - nginx

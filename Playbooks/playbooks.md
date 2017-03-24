@@ -1,6 +1,6 @@
 ---
 - name: Install and Configure OpenJDK
-  hosts: centos
+  hosts: app
   become: yes
 
   tasks:
