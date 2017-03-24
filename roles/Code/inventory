@@ -1,11 +1,14 @@
 [nodes]
-192.168.0.79
-192.168.0.68
-192.168.0.10
+node1
+node2
+node3
+node4
 
-[centos]
-192.168.0.79
-192.168.0.10
+[lb]
+node1
 
-[ubuntu]
-192.168.0.68
+[app]
+node2
+node3
+node4
+
