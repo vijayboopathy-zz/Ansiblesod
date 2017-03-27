@@ -10,7 +10,7 @@
         state: present
         update_cache: yes
 
-    - name: Install OpenJDK8
+    - name: Install OpenJDK7
       yum:
-        name: java-1.8.0-openjdk
+        name: java-1.7.0-openjdk
         state: present

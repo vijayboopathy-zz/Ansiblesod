@@ -1,6 +1,6 @@
 ---
 - name: Install and Configure OpenJDK
-  hosts: centos
+  hosts: app
   become: yes
 
   tasks:
@@ -9,7 +9,7 @@
         name: epel-release
         state: present
         update_cache: yes
-        
+
     - name: Install OpenJDK7
       yum:
         name: java-1.7.0-openjdk
