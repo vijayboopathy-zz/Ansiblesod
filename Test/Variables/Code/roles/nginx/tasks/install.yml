@@ -8,6 +8,10 @@
   yum:
     name: "{{ package }}"
     state: latest
+  register: return_of_install
+
+- name: Installation Details
+  debug: var=return_of_install
 
 - name: Configure Nginx load-balancer
   copy:
