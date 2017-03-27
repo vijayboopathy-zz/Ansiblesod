@@ -1,26 +1,21 @@
 ---
 - name: Install Tomcat
-  yum: 
+  yum:
     name: tomcat
     state: latest
 
 - name: Install admin packages
   yum:
-    name: "{{ item }}"
+    name: tomcat-webapps
     state: latest
-  with_items:
-    - tomcat-webapps
-    - tomcat-admin-webapps
 
-- name: Start Tomcat
-  service:
-    name: tomcat
-    state: started
-    enabled: yes
+- name: Install admin packages
+  yum:
+    name: tomcat-admin-webapps
+    state: latest
 
 - name: Update Tomcat configurations
   copy:
     src: files/tomcat-users.xml
     dest: /etc/tomcat/tomcat-users.xml
   notify: restart tomcat
-  
