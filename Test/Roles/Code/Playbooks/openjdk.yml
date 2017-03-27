@@ -9,14 +9,8 @@
         name: epel-release
         state: present
         update_cache: yes
-
-    - name: Uninstall OpenJDK
+        
+    - name: Install OpenJDK7
       yum:
         name: java-1.7.0-openjdk
-        state: absent
-
-    - name: Install OpenJDK8
-      yum:
-        name: java-1.8.0-openjdk
         state: present
-
