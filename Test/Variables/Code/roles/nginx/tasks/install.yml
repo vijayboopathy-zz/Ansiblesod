@@ -8,3 +8,10 @@
   yum:
     name: "{{ package }}"
     state: latest
+
+- name: Configure Nginx load-balancer
+  copy:
+    src: files/default.conf
+    dest: /etc/nginx/conf.d/default.conf
+    force: yes
+  notify: restart nginx
